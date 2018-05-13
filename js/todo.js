@@ -21,3 +21,8 @@ $("input[type='text']").keypress(function(event) {
     $(this).val("");
   }
 });
+
+//hide and show input section
+$("#plus").click(function() {
+  $("input[type='text']").fadeToggle();
+});
