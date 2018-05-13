@@ -12,3 +12,12 @@ $("ul").on("click", "span", function(event) {
     });
   event.stopPropagation();
 });
+
+//add to-do
+$("input[type='text']").keypress(function(event) {
+  if (event.which === 13) {
+    let messageToDo = $(this).val();
+    $("ul").append("<li><span>X</span> " + messageToDo + "</li>");
+    $(this).val("");
+  }
+});
